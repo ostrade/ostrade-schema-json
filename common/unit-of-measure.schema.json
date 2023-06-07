@@ -1,6 +1,6 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://ostrade.org/schema/json/common/unit-of-measure/v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "UnitOfMeasure",
   "type": "string",
   "enum": [
