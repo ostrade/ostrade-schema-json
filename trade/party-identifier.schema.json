@@ -1,0 +1,23 @@
+{
+    "$id": "https://ostrade.org/schema/json/trade/party-identifier/v1",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "PartyIdentifier",
+    "type": "object",
+    "properties": {
+        "source": {
+            "type": "string",
+            "enum": [
+                "LEID",
+                "NPID",
+                "PLID"
+            ]
+        },
+        "identifier": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "source",
+        "identifier"
+    ]
+}

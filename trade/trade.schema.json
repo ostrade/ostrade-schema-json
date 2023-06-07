@@ -1,0 +1,21 @@
+{
+    "$id": "https://ostrade.org/schema/json/trade/trade/v1",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Trade",
+    "type": "object",
+    "properties": {
+        "trade_id": {
+            "type": "integer"
+        },
+        "trade_legs": {
+            "type": "array",
+            "items": {
+                "$ref": "/schema/json/trade/trade-leg/v1"
+            },
+            "minItems": 1
+        }
+    },
+    "required": [
+        "trade_id"
+    ]
+}

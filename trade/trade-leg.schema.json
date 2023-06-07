@@ -1,0 +1,56 @@
+{
+    "$id": "https://ostrade.org/schema/json/trade/trade-leg/v1",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "TradeLeg",
+    "type": "object",
+    "properties": {
+        "leg_type": {
+            "type": "string",
+            "enum": [
+                "FIXED",
+                "FLOATING"
+            ]
+        },
+        "payer": {
+            "$ref": "#/$defs/party-identifier"
+        },
+        "receiver": {
+            "$ref": "#/$defs/party-identifier"
+        },
+        "notional_quantity": {
+            "type": "number"
+        },
+        "notional_quantity_uom": {
+            "$ref": "#/$defs/unit-of-measure"
+        }, 
+        "notional_quantity_frequency": {
+            "$ref": "/schema/json/common/frequency/v1"
+        },
+        "price": {
+            "type": "number"
+        },
+        "price_currency": {
+            "$ref": "/schema/json/common/currency/v1"
+        },
+        "price_uom": {
+            "$ref": "#/$defs/unit-of-measure"
+        },
+        "price_reference": {
+            "$ref": "/schema/json/common/price-reference/v1"
+        },
+        "delivery_location": {
+            "$ref": "/schema/json/common/delivery-location/v1"
+        }
+    },
+    "required": [
+        "payer", "receiver"
+    ],
+    "$defs": {
+        "party-identifier": {
+            "$ref": "/schema/json/trade/party-identifier/v1"
+        },
+        "unit-of-measure": {
+            "$ref": "/schema/json/common/unit-of-measure/v1"
+        }
+    }
+}

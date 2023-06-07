@@ -1,0 +1,18 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://ostrade.org/schema/json/common/delivery-location/v1",
+    "title": "DeliveryLocation",
+    "type": "object",
+    "properties": {
+        "source": {
+            "type": "string"
+        },
+        "identifier": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "source",
+        "identifier"
+    ]
+}
