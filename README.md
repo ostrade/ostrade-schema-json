@@ -1,0 +1,1 @@
+# ostrade json schema
